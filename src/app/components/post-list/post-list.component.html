@@ -1,0 +1,15 @@
+
+<!-- Component qui contient la liste des posts -->
+
+<ul class="list-group">
+    
+    <!-- Créer un post par élément du tableau + envoyer les variables vers post-list-item-->
+    <app-post-list-item 
+        *ngFor="let post of inputPosts" 
+        [title]="post.titlePost" 
+        [content]="post.contentPost"
+        [loveIts]="post.loveIts" 
+        [created_at]="post.created_at"
+    ></app-post-list-item>
+
+</ul>
